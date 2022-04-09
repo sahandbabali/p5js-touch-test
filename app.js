@@ -8,7 +8,7 @@ function draw() {
   let display = touches.length + " touches";
   if (touches.length > 0) {
     console.log(touches);
-    for (let i = 0; i < touches.length; i++) {
+    for (let i = 0; i < touches.length - 1; i++) {
       ellipse(touches[i].x, touches[i].y, 100, 100);
     }
   }
