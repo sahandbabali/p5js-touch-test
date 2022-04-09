@@ -9,11 +9,11 @@ function draw() {
   if (touches.length > 0) {
     console.log(touches);
   }
-
-  if (touches.length > 1) {
-    for (let i = 0; i < touches.length - 1; i++) {
-      line(touches[i].x, touches[i].y, touches[i + 1].x, touches[i + 1].x);
-    }
+  for (let i = 0; i < touches.length; i++) {
+    ellipse(touches[i].x, touches[i].y, 100, 100);
+  }
+  if (touches.length == 2) {
+    line(touches[0].x, touches[0].y, touches[1].x, touches[1].y);
   }
   text(display, 5, 10);
 }
